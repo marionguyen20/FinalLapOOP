@@ -45,7 +45,7 @@ public class Bank {
     }
 
     public void displayAccByCustomerID (String customerID, String accountType){
-        System.out.println("Customer ID: " + customerID + "Account Type: " + accountType);
+        System.out.println("Customer ID: " + customerID + "  Account Type: " + accountType);
         List<Account> accounts = listOfAccount.stream()
                 .filter(a -> customerID.equals(a.customerID) && accountType.equals(a.accountType))
                 .collect(Collectors.toList());
