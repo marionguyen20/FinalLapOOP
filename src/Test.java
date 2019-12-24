@@ -1,6 +1,7 @@
 public class Test {
     public static void main(String args[]) {
         Bank bank = new Bank("INTERNATIONAL UNIVERSITY BANK", "Thu Duc District");
+        bank.toString();
 
         System.out.println("-----ADDING ACCOUNT TEST-----\n");
         bank.addAccount(new SavingsAccount("sa01", "cus001", "Savings Account", 5000, 0.02));

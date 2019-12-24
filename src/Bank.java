@@ -22,17 +22,16 @@ public class Bank {
         if (!setID.contains(a.accountID)) {
             setID.add(a.accountID);
             listOfAccount.add(a);
-            System.out.println(String.format(
-                    "<<cusID: %s>> <<accType: %s>> <<accID: %s>> was added successfully"
-            ));
+            System.out.println("<<cusID: " + a.customerID + ">> <<accType: " + a.accountType + ">> <<accID: " + a.accountID + ">> was added successfully"
+            );
         } else {
-            System.out.println(String.format("Couldn't add the account <<ID: %s>>", a.accountID));
+            System.out.println("Couldn't add the account <<ID: " + a.accountID + ">>");
         }
 
     }
 
     public void displayAccByCustomerID (String customerID) {
-        System.out.println(String.format("CustomerID: %s", customerID));
+        System.out.println("CustomerID: " + customerID);
         List<Account> accounts = listOfAccount.stream()
                 .filter(a -> customerID.equals(a.customerID))
                 .collect(Collectors.toList());
@@ -46,9 +45,7 @@ public class Bank {
     }
 
     public void displayAccByCustomerID (String customerID, String accountType){
-        System.out.println(String.format(
-                "Customer ID: %s\tAccount Type: %s", customerID, accountType
-        ));
+        System.out.println("Customer ID: " + customerID + "Account Type: " + accountType);
         List<Account> accounts = listOfAccount.stream()
                 .filter(a -> customerID.equals(a.customerID) && accountType.equals(a.accountType))
                 .collect(Collectors.toList());
